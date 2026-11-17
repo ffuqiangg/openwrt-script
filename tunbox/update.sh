@@ -1,20 +1,18 @@
 #!/bin/sh
 
+# --- 基础变量 ---
 dir="/etc/tunbox"
 tmp="/tmp/tunbox"
 
 # --- 订阅配置 ---
-# set 设置节点前缀及订阅地址，前缀用于区分不同订阅的节点
-# 每组节点前缀与订阅地址间用竖线 | 分割
-# 除最后一行外每行末尾添加反斜杠 \
+# 节点前缀与订阅地址间用竖线 | 分割
 set -- \
     "[provider1] |https://xxx.com/token?=xxx" \
     "[provider2] |https://yyy.com/token?=yyy"
-# --- 订阅配置END ---
 
 
+# --- 生成配置 ---
 mkdir -p "$tmp"
-
 a=1
 for i in "$@"; do
     case "$i" in
@@ -27,10 +25,8 @@ for i in "$@"; do
     esac
     a=$((a + 1))
 done
-
 jq -s '{outbounds: add}' ${tmp}/*.json > ${tmp}/outbounds.json
 ${dir}/sub ${tmp}/outbounds.json --template ${dir}/template.json --out ${dir}/config.json
-
 rm -rf "$tmp"
 
 exit 0
