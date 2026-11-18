@@ -14,7 +14,7 @@
 ```
 > [!NOTE]
 > 1. 带 * 的文件须要可执行权限。
-> 2. template.json 文件为生成订阅文件的模板，采用 [Toperlock/sing-box-subscribe](https://github.com/Toperlock/sing-box-subscribe) 规范。
+> 2. template.json 为生成配置文件的模板，采用 [Toperlock/sing-box-subscribe](https://github.com/Toperlock/sing-box-subscribe) 规范。
 > 3. sub 文件来自 [rainbend/sing-box-subscribe-cli](https://github.com/rainbend/sing-box-subscribe-cli) 项目。
 
 ---
