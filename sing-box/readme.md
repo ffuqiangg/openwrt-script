@@ -3,7 +3,7 @@
 本方案采用 `redirect(TCP)` + `tproxy(UDP)` 代理模式，兼容 **fw3** 与 **fw4**。支持订阅自动更新、节点过滤/分组、分流规则自定义、配置多个订阅自动合并。
 
 > [!IMPORTANT]
-> 仅支持 **IPv4**，不支持 IPv6。本项目不含订阅转换功能，如需转换请参考 [sing-box-subscribe 文档](subscribe.md) 。
+> 仅支持 **IPv4**，不支持 IPv6。本项目不含订阅转换功能，如订阅不支持 sing-box 可考虑使用 [mihomo](../mihomo) / [tunbox](../tunbox) 脚本 。
 
 📑 ⌈ [更新日志](changlog.md) ⌋
 
