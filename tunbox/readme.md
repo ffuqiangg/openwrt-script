@@ -1,11 +1,11 @@
 ## sing-box tun 文档
 
 ```
-tunbox.conf --------> /etc/config/tunbox
-tunbox.init --------> /etc/init.d/tunbox *
-sub ----------------> /etc/tunbox/sub *
-template.json ------> /etc/tunbox/template.json
-update.sh ----------> /etc/tunbox/update.sh *
+tunbox.conf ......... /etc/config/tunbox
+tunbox.init ......... /etc/init.d/tunbox *
+sub ................. /etc/tunbox/sub *
+template.json ....... /etc/tunbox/template.json
+update.sh ........... /etc/tunbox/update.sh *
 ```
 
 > [!NOTE]
