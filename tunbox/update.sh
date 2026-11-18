@@ -5,7 +5,7 @@ dir="/etc/tunbox"
 tmp="/tmp/tunbox"
 
 # --- 订阅配置 ---
-# 节点前缀与订阅地址间用竖线 | 分割
+# 节点前缀与订阅地址间用竖线 | 分割，注意行末添加反斜杠(最后一行不需要)
 set -- \
     "[provider1] |https://xxx.com/token?=xxx" \
     "[provider2] |https://yyy.com/token?=yyy"
