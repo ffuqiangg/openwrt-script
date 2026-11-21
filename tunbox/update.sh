@@ -14,16 +14,28 @@ set -- \
 # --- 生成配置 ---
 mkdir -p "$tmp"
 a=1
+b=1
 for i in "$@"; do
     case "$i" in
         *\|*)
-            ${dir}/sub --url "${i##*|}" --prefix "${i%%|*}" --timeout 120s --only-nodes --out ${tmp}/$a.json
+            while [ "$b" -le "$delay" ]; do
+                ${dir}/sub --url "${i##*|}" --prefix "${i%%|*}" --timeout 120s --only-nodes --out ${tmp}/$a.json
+                [ -f "${tmp}/$a.json" ] && break
+                sleep 5
+                a=$((a + 1))
+                b=$((b + 1))
+            done
             ;;
         *)
-            ${dir}/sub --url "$i" --timeout 120s --only-nodes --out ${tmp}/$a.json
+            while [ "$b" -le "$delay" ]; do
+                ${dir}/sub --url "$i" --timeout 120s --only-nodes --out ${tmp}/$a.json
+                [ -f "${tmp}/$a.json" ] && break
+                sleep 5
+                a=$((a + 1))
+                b=$((b + 1))
+            done
             ;;
     esac
-    a=$((a + 1))
 done
 jq -s '{outbounds: add}' ${tmp}/*.json > ${tmp}/outbounds.json
 ${dir}/sub ${tmp}/outbounds.json --template ${dir}/template.json --out ${dir}/config.json
