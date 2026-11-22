@@ -57,7 +57,7 @@ profile:
 # 默认登录地址 http://路由器IP:9090/ui (密码: ffuqiangg)
 external-controller: 0.0.0.0:9090
 external-ui: ui
-external-ui-url: "https://gh-proxy.com/github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 secret: "ffuqiangg"
 
 # --- 流量嗅探 ---
@@ -296,7 +296,6 @@ rule-providers:
       - DOMAIN-SUFFIX,dytt-cinema.com
       - DOMAIN-SUFFIX,dmbus.cc
       - DOMAIN-SUFFIX,bgm.tv
-      - DOMAIN-SUFFIX,gh-proxy.com
       - DOMAIN-KEYWORD,modujx
       - DOMAIN-KEYWORD,ddys
       - DOMAIN-KEYWORD,bdzybf
