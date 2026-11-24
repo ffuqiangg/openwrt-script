@@ -17,11 +17,11 @@ mkdir -p "$tmp"
 for i in "$@"; do
     case "$i" in
         *\|*)
-            curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp ${i##*|} || exit 0
+            curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp ${i##*|} || { rm -f $tmp/config.tmp; exit 1; }
             ${dir}/sub $tmp/config.tmp --prefix "${i%%|*}" --only-nodes --out ${tmp}/$a.json
             ;;
         *)
-            curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp $i || exit 0
+            curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp $i || { rm -f $tmp/config.tmp; exit 1; }
             ${dir}/sub $tmp/config.tmp --only-nodes --out ${tmp}/$a.json
             ;;
     esac
