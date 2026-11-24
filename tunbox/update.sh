@@ -19,12 +19,10 @@ for i in "$@"; do
         *\|*)
             curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp ${i##*|}
             ${dir}/sub $tmp/config.tmp --prefix "${i%%|*}" --only-nodes --out ${tmp}/$a.json
-            rm $tmp/config.tmp
             ;;
         *)
             curl -fsL -A clash.meta -m 120 --connect-timeout 15 --retry 3 -X GET -o $tmp/config.tmp $i
             ${dir}/sub $tmp/config.tmp --only-nodes --out ${tmp}/$a.json
-            rm $tmp/config.tmp
             ;;
     esac
     a=$((a + 1))
