@@ -45,7 +45,7 @@ sh -c "$(curl -ksS https://fastly.jsdelivr.net/gh/ffuqiangg/openwrt-script@main/
 /etc/init.d/sing-box disable
 ```
 
-##
+---
 
 ### 💡 快速上手 (最小配置)
 
@@ -58,7 +58,7 @@ sh -c "$(curl -ksS https://fastly.jsdelivr.net/gh/ffuqiangg/openwrt-script@main/
 - 修改 `main` 部分 : `option enabled '1'`
 - 修改 `profile` 部分 : `list conf 'file:文件名'`
 
-##
+---
 
 ### ⚙️ 核心配置详解
 
@@ -140,6 +140,6 @@ config sing-box 'advanced'
 - 在 `/etc/sing-box/resources` 目录新建 custom.json 文件。其 `top` 对象键为出站分组 / 节点 (如果分组不存在则自动创建)，值为一组无头规则。示例文件 [custom.json](https://gist.github.com/ffuqiangg/00a6acb48a1fb9f60a424e606e7a930a) ，语法参考 ⌈ [sing-box 无头规则](https://sing-box.sagernet.org/zh/configuration/rule-set/headless-rule/) ⌋
 
 
-##
+---
 
 使用中有疑问可以通过 [Gmail](mailto:ffuiangg@gmail.com) 或 [Telegram](https://t.me/ffuqiangg) 联系我，发现代码有问题或者其它改进意见欢迎提交 PR / Issues 。

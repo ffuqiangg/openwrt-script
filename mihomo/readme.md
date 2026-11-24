@@ -45,7 +45,7 @@ sh -c "$(curl -ksS https://fastly.jsdelivr.net/gh/ffuqiangg/openwrt-script@main/
 /etc/init.d/mihomo disable
 ```
 
-##
+---
 
 ### 📝 配置文件关键字段说明
 
@@ -129,7 +129,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
 ```
 
-##
+---
 
 **想了解更多细节？**  
 建议访问 ⌈ [mihomo 配置详解](https://wiki.metacubex.one/config/) ⌋ 进阶学习。
