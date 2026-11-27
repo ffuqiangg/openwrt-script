@@ -2,7 +2,6 @@
   "log": {
     "disabled": false,
     "level": "error",
-    "output": "/var/log/sing-box.log",
     "timestamp": true
   },
   "dns": {
@@ -74,8 +73,7 @@
     "clash_api": {
       "external_controller": "0.0.0.0:9900",
       "external_ui": "ui",
-      "external_ui_download_url": "https://gh-proxy.com/github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-      "external_ui_download_detour": "直连",
+      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
       "secret": "ffuqiangg",
       "default_mode": "rule"
     },
