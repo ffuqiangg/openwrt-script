@@ -1,8 +1,8 @@
 #!/bin/sh
 #
 # 此脚本用于安装 openwrt 裸核运行 mihomo 相关文件
-# 源码: https://github.com/ffuqiangg/build_openwrt/tree/main/patch/mihomo
-# 文档: https://github.com/ffuqiangg/build_openwrt/blob/main/doc/mihomo.md
+# 源码: https://github.com/ffuqiangg/openwrt-script/tree/main/mihomo
+# 文档: https://github.com/ffuqiangg/openwrt-script/blob/main/mihomo/readme.md
 #
 
 # --- 检测网络环境决定是否使用 github 代理 ---
